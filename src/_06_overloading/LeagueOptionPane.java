@@ -6,6 +6,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /*
@@ -17,13 +18,23 @@ import javax.swing.JPanel;
  */
 public class LeagueOptionPane {
 	
+	
 	public static void showMessageDialog(String message) {
 		// 1. Open example.png and make a GUI that looks like that
 		//    The message parameter is what we want to show on our pop-up
-		
+		JFrame frame = new JFrame(); 
+		JPanel panel = new JPanel(); 
+		JLabel label = new JLabel(); 
 		
 		// 2. Uncomment the line of code below. It sets the location of our frame to the center of the screen
 		//frame.setLocationRelativeTo(null);
+		frame.setLocationRelativeTo(null); 
+		frame.setVisible(true);
+		frame.add(panel);
+		frame.add(label);
+		frame.pack(); 
+		frame.setTitle("message");
+		
 	}
 	
 	// 3. Call this method in the Runner class
