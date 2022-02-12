@@ -19,7 +19,7 @@ import javax.swing.Timer;
  * as the countdown hits zero. 
  */
 public class IntroToTimers extends JPanel implements ActionListener, KeyListener{
-	static final int WIDTH = 500;
+	static final int WIDTH = 500; 
 	static final int HEIGHT = 500;
 	JFrame frame = new JFrame();
 	Font font = new Font("Arial", Font.BOLD, 50);
@@ -28,7 +28,9 @@ public class IntroToTimers extends JPanel implements ActionListener, KeyListener
 	int speed = 30;
 	
 	// 1. Declare a Timer variable, but do not initialize it.
-
+	Timer timer;
+	private Object newTimer; 
+	 
 
 	public static void main(String[] args) {
 		IntroToTimers tg = new IntroToTimers();
@@ -43,10 +45,13 @@ public class IntroToTimers extends JPanel implements ActionListener, KeyListener
 		frame.pack();
 		frame.addKeyListener(this);
 		
+		
+		
 		// 2. Set the time variable to maxTime
-
+	timer.equals(maxTime);
 		// 3. Initialize timer to a new Timer object. For the first argument, use 1000/speed. For the second argument, use this
-
+		timer.equals(newTimer);
+		newTimer.equals(1000);
 		// 11. Run it! Notice how it doesn't update? That's because our timer isn't triggering the actionPerformed() method yet!
 		// 12. Make the timer start!
 
@@ -71,17 +76,32 @@ public class IntroToTimers extends JPanel implements ActionListener, KeyListener
 		int keyCode = e.getKeyCode();
 		
 		// 4. if keyCode is 32 (that's the spacebar key!)...
+		if (keyCode = e.getSource("32")) { 
+			
+		}
 
 
 			// 5. if time is less than 2...
-
-				// 6. Tell them they win!
+			if (time < 2) {
+			JOptionPane.showMessageDialog(null, "You Win!");	
+			} else if (time == maxTime) {
+				
+			}
+			}
+				
+		
+			 
 
 			
-			// 7. Otherwise, set time equal to maxTime
-
+			
+	
+				// 6. Tell them they win!
 		
-	}
+			
+			// 7. Otherwise, set time equal to maxTime
+			
+		
+	
 
 	@Override
 	public void paintComponent(Graphics g) {

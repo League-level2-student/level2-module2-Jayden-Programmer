@@ -9,6 +9,6 @@ public class LeagueOptionPaneRunner {
 		JOptionPane.showMessageDialog(null, "The League is the Best", "Title", JOptionPane.INFORMATION_MESSAGE, icon); 
 		JOptionPane.showMessageDialog(null, "The League is the Best", "Message", JOptionPane.INFORMATION_MESSAGE);
 		
-	
+	LeagueOptionPane.showMessageDialog("The League is the Best");
 
 }}
